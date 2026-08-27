@@ -2,9 +2,50 @@
 
 export(run_app)
 import(shiny)
-importFrom(golem,activate_js)
-importFrom(golem,add_resource_path)
-importFrom(golem,bundle_resources)
-importFrom(golem,favicon)
-importFrom(golem,with_golem_options)
-importFrom(shiny,shinyApp)
+importFrom(bslib,
+  card,
+  card_header,
+  layout_columns,
+  layout_sidebar,
+  sidebar
+)
+importFrom(ggplot2,
+  aes,
+  coord_flip,
+  element_blank,
+  element_text,
+  expansion,
+  geom_hline,
+  ggplot,
+  labs,
+  margin,
+  rel,
+  scale_fill_manual,
+  scale_y_continuous,
+  theme,
+  theme_minimal
+)
+importFrom(golem,
+  activate_js,
+  add_resource_path,
+  bundle_resources,
+  favicon,
+  with_golem_options
+)
+importFrom(htmltools,
+  tagList,
+  tags
+)
+importFrom(httr,
+  GET,
+  content,
+  stop_for_status,
+  user_agent
+)
+importFrom(jsonlite,fromJSON)
+importFrom(rlang,.data)
+importFrom(shiny,
+  NS,
+  shinyApp,
+  tagList
+)

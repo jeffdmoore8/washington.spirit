@@ -6,11 +6,34 @@
 #' @noRd
 app_ui <- function(request) {
 	tagList(
-		# Leave this function for adding external resources
 		golem_add_external_resources(),
-		# Your application UI logic
-		fluidPage(
-			golem::golem_welcome_page() # Remove this line to start building your UI
+		bslib::page_navbar(
+			title = "Washington Spirit Analytics",
+			theme = bslib::bs_theme(
+				version = 5,
+				bg = "#FFFFFF",
+				fg = "#00272B",
+				primary = "#003A40",
+				secondary = "#F3FB00",
+				"border-radius" = "0.4rem",
+				base_font = bslib::font_google("Barlow", local = FALSE),
+				heading_font = bslib::font_google("Barlow Condensed", local = FALSE)
+			),
+			bslib::nav_panel(
+				"Player explorer",
+				mod_player_explorer_ui("player_explorer_1")
+			),
+			bslib::nav_panel(
+				"League table",
+				mod_league_table_ui("league_table_1")
+			),
+			bslib::nav_spacer(),
+			bslib::nav_item(
+				shiny::tags$span(
+					class = "navbar-text small",
+					textOutput("data_stamp", inline = TRUE)
+				)
+			)
 		)
 	)
 }

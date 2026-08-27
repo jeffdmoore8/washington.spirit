@@ -1,0 +1,191 @@
+/* Washington Spirit — deep teal with a high-voltage yellow accent. */
+
+:root {
+	--spirit-teal: #003A40;
+	--spirit-teal-dark: #00272B;
+	--spirit-teal-light: #0A5A62;
+	--spirit-yellow: #F3FB00;
+	--spirit-chalk: #F4F6F5;
+}
+
+/* Teal page so the white cards pop */
+body {
+	background-color: var(--spirit-teal);
+}
+.navbar + .container-fluid,
+.bslib-page-navbar > .container-fluid {
+	background-color: transparent;
+}
+
+/* Navbar: teal with a yellow keyline */
+.navbar {
+	background-color: var(--spirit-teal-dark) !important;
+	border-bottom: 3px solid var(--spirit-yellow);
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+	color: #fff !important;
+	letter-spacing: 0.02em;
+}
+.navbar .navbar-brand {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+	color: var(--spirit-yellow) !important;
+}
+.navbar .nav-link.active {
+	border-bottom: 2px solid var(--spirit-yellow);
+}
+.navbar .navbar-text {
+	color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Cards stay light and legible on the teal ground */
+.card,
+.bslib-sidebar-layout > .sidebar {
+	background-color: #fff;
+}
+.bslib-sidebar-layout {
+	--bs-border-radius: 0.4rem;
+	border-radius: 0.4rem;
+	overflow: hidden;
+}
+h1, h2, h3, h4, h5,
+.card-header {
+	letter-spacing: 0.01em;
+}
+.card-header {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	color: var(--spirit-teal);
+}
+
+/* Hoverable info icon next to a stat name */
+.spirit-info {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 0.3em;
+	color: var(--spirit-teal-light);
+	cursor: help;
+	opacity: 0.75;
+	vertical-align: baseline;
+}
+.spirit-info:hover {
+	opacity: 1;
+	color: var(--spirit-teal);
+}
+.bslib-value-box .spirit-info {
+	color: var(--spirit-yellow);
+	opacity: 0.85;
+}
+.tooltip.show {
+	opacity: 1;
+}
+.tooltip-inner {
+	background-color: var(--spirit-teal-dark);
+	color: #fff;
+	text-align: left;
+	max-width: 260px;
+	font-size: 0.8rem;
+	line-height: 1.4;
+	padding: 0.5rem 0.65rem;
+	border-left: 3px solid var(--spirit-yellow);
+}
+.tooltip .tooltip-arrow::before {
+	border-top-color: var(--spirit-teal-dark);
+}
+
+/* ggiraph charts: fluid, aspect-preserving, fill the card width but cap how
+   large the text can scale on very wide screens. */
+.girafe.html-widget,
+.girafe_container_std {
+	width: 100% !important;
+	height: auto !important;
+	max-width: 1050px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.girafe_container_std svg {
+	display: block;
+	width: 100% !important;
+	height: auto !important;
+}
+
+/* Stat tiles: dark teal, big yellow value on top, label (with info icon to its
+   right) below. */
+.spirit-stat {
+	background-color: var(--spirit-teal-dark);
+	color: #fff;
+	border-left: 4px solid var(--spirit-yellow);
+	border-radius: 0.4rem;
+	padding: 1rem 1.15rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+}
+.spirit-stat-value {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.1;
+	color: var(--spirit-yellow);
+}
+.spirit-stat-label {
+	display: flex;
+	align-items: center;
+	color: rgba(255, 255, 255, 0.72);
+	text-transform: uppercase;
+	font-size: 0.95rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+}
+.spirit-stat-label .spirit-info {
+	flex: 0 0 auto;
+	align-self: center;
+	color: var(--spirit-yellow);
+	opacity: 0.9;
+	margin-left: 0.4em;
+}
+.spirit-stat-label .spirit-info svg {
+	display: block;
+	width: 1.2em;
+	height: 1.2em;
+}
+
+/* Player profile header */
+.spirit-player-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0.75rem;
+	padding: 0.75rem 1rem;
+	background-color: #fff;
+	border-radius: 0.4rem;
+	border-left: 5px solid var(--spirit-yellow);
+}
+.spirit-headshot {
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: top center;
+	background-color: var(--spirit-chalk);
+	border: 3px solid var(--spirit-teal);
+	flex: 0 0 auto;
+}
+.spirit-player-name {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.1;
+	margin: 0;
+	color: var(--spirit-teal);
+}
+.spirit-player-meta {
+	color: var(--spirit-teal-light);
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	letter-spacing: 0.04em;
+}

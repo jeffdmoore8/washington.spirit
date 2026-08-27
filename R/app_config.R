@@ -15,6 +15,23 @@ app_sys <- function(
 }
 
 
+#' Path to a packaged data snapshot
+#'
+#' Wrapper over [app_sys()] pointing at the `extdata/` directory where
+#' `data-raw/refresh_data.R` writes the pre-cached parquet snapshots that
+#' power the app.
+#'
+#' @param ... character vectors naming file(s) within `inst/extdata`. With no
+#' arguments, returns the `extdata` directory itself.
+#'
+#' @noRd
+app_data_path <- function(
+	...
+) {
+	app_sys("extdata", ...)
+}
+
+
 #' Read App Config
 #'
 #' @param value Value to retrieve from the config file.
