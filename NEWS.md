@@ -8,6 +8,8 @@
 * Data layer: `data-raw/refresh_data.R` pulls NWSL data (2016+) from American
   Soccer Analysis via `itscalledsoccer` into parquet snapshots under
   `inst/extdata/`, refreshed on a schedule by `.github/workflows/refresh-data.yaml`.
+* CI: `R-CMD-check` and Codecov `test-coverage` GitHub Actions workflows run on
+  every push and pull request to `main`.
 * Branding: Washington Spirit palette (deep teal `#003A40` + yellow `#F3FB00`)
   applied via a `bslib` theme and `inst/app/www/custom.css`.
 * Player headshots from ESPN's CDN, shown in the Player Explorer profile header;
