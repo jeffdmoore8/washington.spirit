@@ -62,6 +62,22 @@ mod_league_table_server <- function(id) {
 					is_spirit = reactable::colDef(show = FALSE),
 					team_id = reactable::colDef(show = FALSE),
 					rank = reactable::colDef(name = "#", width = 45),
+					logo = reactable::colDef(
+						name = "",
+						width = 40,
+						sortable = FALSE,
+						cell = function(value) {
+							if (is.na(value) || !nzchar(value)) {
+								return(NULL)
+							}
+							htmltools::img(
+								src = value,
+								alt = "",
+								loading = "lazy",
+								style = "height:24px;width:24px;object-fit:contain;vertical-align:middle;"
+							)
+						}
+					),
 					team = reactable::colDef(name = "Club", minWidth = 160),
 					gamesplayed = reactable::colDef(name = "GP", width = 55),
 					wins = reactable::colDef(name = "W", width = 50),
@@ -108,6 +124,12 @@ fetch_nwsl_standings_impl <- function(year = as.integer(format(Sys.Date(), "%Y")
 	st[num] <- lapply(st[num], function(x) suppressWarnings(as.numeric(x)))
 	st <- st[order(st$rank), , drop = FALSE]
 	st$is_spirit <- st$team_id == SPIRIT_ESPN_TEAM_ID
+	st$logo <- ifelse(
+		is.na(st$team_id) | !nzchar(st$team_id),
+		NA_character_,
+		sprintf("https://a.espncdn.com/i/teamlogos/soccer/500/%s.png", st$team_id)
+	)
+	st <- st[c("rank", "logo", setdiff(names(st), c("rank", "logo")))]
 	rownames(st) <- NULL
 	attr(st, "season") <- year
 	st

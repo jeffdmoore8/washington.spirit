@@ -3,7 +3,8 @@
 * Player Explorer: pick a Washington Spirit player and season to see their
   Goals Added (g+) breakdown by action type, positional percentile ranks, and
   per-game form. Goalkeepers get the keeper-specific g+ actions.
-* League Table: live NWSL standings from ESPN, with the Spirit highlighted.
+* League Table: live NWSL standings from ESPN, with the Spirit highlighted and
+  each club's crest shown between the rank and name.
 * Data layer: `data-raw/refresh_data.R` pulls NWSL data (2016+) from American
   Soccer Analysis via `itscalledsoccer` into parquet snapshots under
   `inst/extdata/`, refreshed on a schedule by `.github/workflows/refresh-data.yaml`.
