@@ -13,7 +13,7 @@ output: github_document
 )
 ```
 
-# washington.spirit <a><img src="inst/app/www/logo.png align="right" width="120" height="100%" alt="" />
+# washington.spirit <a><img src="inst/app/www/logo.png" align="right" width="120" height="100%" alt="" />
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -25,7 +25,7 @@ output: github_document
 
 You can install the development version of `washington.spirit` like so:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 # install.packages("pak")
 pak::pak("jeffdmoore8/washington.spirit")
 ```
