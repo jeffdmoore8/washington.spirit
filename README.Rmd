@@ -13,7 +13,7 @@ output: github_document
 )
 ```
 
-# washington.spirit <img src="inst/app/www/logo.png align="right" width="120" height="100%" alt="">
+# washington.spirit <a><img src="inst/app/www/logo.png align="right" width="120" height="100%" alt="" /></a>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)

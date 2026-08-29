@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# washington.spirit \<img src=“inst/app/www/logo.png align=”right” width=“120” height=“100%” alt=““\>
+# washington.spirit <a><img src="inst/app/www/logo.png" align="right" width="120" height="100%" alt="" /></a>
 
 <!-- badges: start -->
 
@@ -36,7 +36,7 @@ This README has been compiled on the
 
 ``` r
 Sys.time()
-#> [1] "2026-08-29 16:39:18 EDT"
+#> [1] "2026-08-29 16:49:58 EDT"
 ```
 
 Here are the tests results and package coverage:
@@ -44,7 +44,7 @@ Here are the tests results and package coverage:
 ``` r
 devtools::check(quiet = TRUE)
 #> ── R CMD check results ─────────────────────── washington.spirit 0.0.0.9000 ────
-#> Duration: 21.9s
+#> Duration: 22.3s
 #> 
 #> ❯ checking code files for non-ASCII characters ... WARNING
 #>   Found the following files with non-ASCII characters:
