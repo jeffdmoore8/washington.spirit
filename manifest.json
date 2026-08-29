@@ -4225,7 +4225,7 @@
       "checksum": "53e6ad6748716c6469dbe3cd97e5529a"
     },
     ".Rprofile": {
-      "checksum": "f0f026d23291252ec116ee38441b9b8d"
+      "checksum": "9ce14741da5bee96ba8b2153b70b25af"
     },
     "app.R": {
       "checksum": "e3dd400da60a1d846811930a1f84307e"
@@ -4249,7 +4249,7 @@
       "checksum": "6f8f1d67d4abc87c506d3b90ce5ae544"
     },
     "dev/01_start.R": {
-      "checksum": "f07f6bf1de205220dc3233084f1e5c6e"
+      "checksum": "44d3e242887a3c83051f17c14185fb0d"
     },
     "dev/02_dev.R": {
       "checksum": "9cff11a720620649bf47e3b96b254e4e"
@@ -4261,10 +4261,16 @@
       "checksum": "e21d8f5db5d57cd4d0f2db6d012a6109"
     },
     "inst/app/www/custom.css": {
-      "checksum": "5204ebe46c5cae23511abd4512343856"
+      "checksum": "5d4090ffce41ef604013bb7b87037e7a"
     },
     "inst/app/www/favicon.ico": {
       "checksum": "81560d1b906a530c87fa0acbb2f5cca4"
+    },
+    "inst/app/www/favicon.png": {
+      "checksum": "5b5f213b6205f2ee8deea4fabfbcb81d"
+    },
+    "inst/app/www/logo.png": {
+      "checksum": "5b5f213b6205f2ee8deea4fabfbcb81d"
     },
     "inst/extdata/games.parquet": {
       "checksum": "8163db37badc6c912fa6ca501b7f578f"
@@ -4351,7 +4357,7 @@
       "checksum": "cae1a121808c2eb47e1206f4ddf01453"
     },
     "R/app_ui.R": {
-      "checksum": "8505c036fb222855038ab5d6f9cbcf9d"
+      "checksum": "c4024c7aef57fefd1f9e956b66f77d6d"
     },
     "R/fct_asa.R": {
       "checksum": "43ab4d40771cd5e69b1f15f48249678a"
@@ -4384,10 +4390,10 @@
       "checksum": "8c7dd4416135685d5d40681c52f5e920"
     },
     "README.md": {
-      "checksum": "e4bc974c1cfd72e9e20a09b14d6b7529"
+      "checksum": "5447ed36cbbb44303dab8104d0f33fa3"
     },
     "README.Rmd": {
-      "checksum": "6e66603bf278af3b52dfddabd26c1f29"
+      "checksum": "95f845e5a3b3a58d0aca6e7e20a1fe3f"
     },
     "renv.lock": {
       "checksum": "9327eb2869fbb9e1549f952bf58c9872"
