@@ -13,19 +13,21 @@ output: github_document
 )
 ```
 
-# washington.spirit <a><img src="inst/app/www/logo.png align="right" width="120" height="100%" alt="" /></a>
+# washington.spirit <a><img src="inst/app/www/logo.png align="right" width="120" height="100%" alt="" />
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/jeffdmoore8/washington.spirit/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jeffdmoore8/washington.spirit/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/jeffdmoore8/washington.spirit/graph/badge.svg)](https://app.codecov.io/gh/jeffdmoore8/washington.spirit)
 <!-- badges: end -->
 
 ## Installation
 
-You can install the development version of `{washington.spirit}` like so:
+You can install the development version of `washington.spirit` like so:
 
 ```{r}
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("pak")
+pak::pak("jeffdmoore8/washington.spirit")
 ```
 
 ## Run
