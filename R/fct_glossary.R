@@ -20,7 +20,7 @@ stat_glossary <- c(
 			"through their on-ball actions this season, compared with a",
 			"replacement-level player. Around 0 is replacement level; higher is better."
 		),
-	"Goals − xG" =
+	"Goals - xG" =
 		paste(
 			"Goals scored minus expected goals (xG). Positive means the player",
 			"finished their chances better than an average player would have;",
@@ -28,7 +28,7 @@ stat_glossary <- c(
 		),
 	"xG + xA" =
 		paste(
-			"Expected goals plus expected assists — the combined quality of the",
+			"Expected goals plus expected assists - the combined quality of the",
 			"chances this player took and the chances they set up, regardless of",
 			"whether they were actually scored."
 		),
@@ -44,13 +44,13 @@ stat_glossary <- c(
 	# --- percentile-chart metrics ------------------------------------------
 	"xG per 90" =
 		paste(
-			"Expected goals per 90 minutes — the quality of chances the player",
+			"Expected goals per 90 minutes - the quality of chances the player",
 			"gets on the ball, scaled to a full match. Measures shot volume and",
 			"shot location, not finishing."
 		),
 	"xA per 90" =
 		paste(
-			"Expected assists per 90 minutes — the quality of the chances the",
+			"Expected assists per 90 minutes - the quality of the chances the",
 			"player creates for team-mates, scaled to a full match."
 		),
 	"xG+xA per 90" =
@@ -61,7 +61,7 @@ stat_glossary <- c(
 		"Passes that led directly to a team-mate's shot, per 90 minutes.",
 	"Goals per 90" =
 		"Goals scored per 90 minutes.",
-	"Finishing (G − xG)" =
+	"Finishing (G - xG)" =
 		paste(
 			"Goals minus expected goals. A measure of finishing: positive means",
 			"the player out-scores the quality of their chances."
@@ -75,7 +75,7 @@ stat_glossary <- c(
 	"Share of team touches" =
 		paste(
 			"The percentage of the team's total touches that this player has while",
-			"on the pitch — how involved they are in the team's play."
+			"on the pitch - how involved they are in the team's play."
 		),
 
 	# --- goals-added action types: outfield --------------------------------
@@ -84,7 +84,7 @@ stat_glossary <- c(
 	"Fouling" =
 		"Goal value added or lost through committing and drawing fouls.",
 	"Interrupting" =
-		"Goal value added by defensive actions — tackles, interceptions and blocks that end opponent attacks.",
+		"Goal value added by defensive actions - tackles, interceptions and blocks that end opponent attacks.",
 	"Passing" =
 		"Goal value added by moving the ball to team-mates, accounting for how much each pass improved the team's position.",
 	"Receiving" =

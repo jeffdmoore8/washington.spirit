@@ -13,7 +13,7 @@ app_server <- function(input, output, session) {
 		if (is.null(meta) || !nrow(meta)) {
 			return("")
 		}
-		paste("Data through", meta$seasons_to[1], "· refreshed", meta$refreshed_at[1])
+		paste("Data through", meta$seasons_to[1], "season, refreshed", meta$refreshed_at[1])
 	})
 
 	mod_player_explorer_server("player_explorer_1", app_data)

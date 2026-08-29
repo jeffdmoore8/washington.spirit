@@ -1,5 +1,5 @@
 # =============================================================================
-# refresh_data.R — rebuild the app's data snapshots from American Soccer Analysis
+# refresh_data.R - rebuild the app's data snapshots from American Soccer Analysis
 #
 # Pulls every NWSL season ASA covers (2016+), writes tidy parquet files to
 # inst/extdata/ where load_app_data() reads them. League-wide season tables are

@@ -55,7 +55,7 @@ read_snapshot <- function(file) {
 	}
 	# arrow returns ALTREP columns that hold pointers into Arrow's C++ memory.
 	# load_app_data() is memoised for the life of the process, so those columns
-	# stay reachable until R exits — at which point covr's on-exit saveRDS()
+	# stay reachable until R exits - at which point covr's on-exit saveRDS()
 	# segfaults touching them after Arrow's runtime has been torn down. Force
 	# full materialization on read so the frame is plain R vectors.
 	old <- options(arrow.use_altrep = FALSE)

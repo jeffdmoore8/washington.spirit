@@ -146,7 +146,7 @@ player_percentiles <- function(data, player_id, season) {
 		shots_p90 = "Shots per 90",
 		key_passes_p90 = "Key passes per 90",
 		goals_p90 = "Goals per 90",
-		g_minus_xg = "Finishing (G − xG)",
+		g_minus_xg = "Finishing (G - xG)",
 		passes_completed_over_expected_p100 = "Passing vs. expected (per 100)",
 		share_team_touches = "Share of team touches"
 	)

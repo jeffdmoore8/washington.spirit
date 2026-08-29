@@ -1,8 +1,8 @@
 test_that("normalize_name transliterates accents and strips punctuation", {
-	expect_equal(normalize_name("Élisabeth Tsé"), "elisabeth tse")
+	expect_equal(normalize_name("\u00c9lisabeth Ts\u00e9"), "elisabeth tse")
 	expect_equal(normalize_name("Emma Gaines-Ramos"), "emma gaines ramos")
 	expect_equal(normalize_name("  Trinity   Rodman "), "trinity rodman")
-	expect_equal(normalize_name("Claudia Martínez"), "claudia martinez")
+	expect_equal(normalize_name("Claudia Mart\u00ednez"), "claudia martinez")
 })
 
 test_that("player_headshot and player_badge read the roster slot", {
@@ -16,7 +16,7 @@ test_that("player_headshot and player_badge read the roster slot", {
 	expect_equal(player_headshot(d, "p1"), "https://example.test/p1.png")
 	expect_null(player_headshot(d, "p2"))
 	expect_null(player_headshot(d, "nope"))
-	expect_equal(player_badge(d, "p1"), "#9 · F")
+	expect_equal(player_badge(d, "p1"), "#9 - F")
 	expect_null(player_badge(d, "p2"))
 })
 

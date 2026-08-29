@@ -42,7 +42,7 @@ SPIRIT_SLATE <- unname(spirit_palette["slate"])
 #' The SVG is emitted at its natural size (`rescale = FALSE`); `custom.css` then
 #' makes it `width: 100%; height: auto`, so it scales fluidly with the card and
 #' its text scales with it. `width_svg`/`height_svg` set the aspect ratio and,
-#' inversely, the on-screen text size — smaller `width_svg` = larger text.
+#' inversely, the on-screen text size - smaller `width_svg` = larger text.
 #'
 #' @param gg A ggplot built with `ggiraph::geom_*_interactive` layers.
 #' @param width_svg,height_svg SVG dimensions in inches.

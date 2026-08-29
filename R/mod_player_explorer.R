@@ -51,7 +51,7 @@ mod_player_explorer_ui <- function(id) {
 		bslib::card(
 			fill = FALSE,
 			bslib::card_header(
-				"Per-game form — goals added",
+				"Per-game form - goals added",
 				info_icon(paste(
 					"Goals Added (g+) in each league match this season (bars), with a",
 					"rolling average (line) to show form. Hover a bar for that game."
@@ -86,7 +86,7 @@ mod_player_explorer_server <- function(id, app_data) {
 
 		shiny::observeEvent(roster(), {
 			r <- roster() # ordered by minutes played, descending
-			# Open on the outfield player with the most minutes — a more useful
+			# Open on the outfield player with the most minutes - a more useful
 			# first view than whichever keeper sorts to the top.
 			outfield <- r$player_id[r$general_position != "GK"]
 			selected <- if (length(outfield)) outfield[1] else r$player_id[1]
@@ -120,9 +120,9 @@ mod_player_explorer_server <- function(id, app_data) {
 			meta <- paste(
 				c(
 					badge,
-					paste("Washington Spirit ·", sel()$season)
+					paste("Washington Spirit -", sel()$season)
 				),
-				collapse = "  —  "
+				collapse = "  -  "
 			)
 
 			img <- if (is.null(headshot)) {
@@ -147,7 +147,7 @@ mod_player_explorer_server <- function(id, app_data) {
 		})
 
 		fmt <- function(x, digits = 2) {
-			if (length(x) == 0 || is.na(x)) "–" else formatC(x, format = "f", digits = digits)
+			if (length(x) == 0 || is.na(x)) "-" else formatC(x, format = "f", digits = digits)
 		}
 
 		gk_season_row <- shiny::reactive({
@@ -169,16 +169,16 @@ mod_player_explorer_server <- function(id, app_data) {
 
 		output$value_boxes <- shiny::renderUI({
 			row <- season_row()
-			minutes <- if (nrow(row)) format(round(row$minutes_played[1]), big.mark = ",") else "–"
+			minutes <- if (nrow(row)) format(round(row$minutes_played[1]), big.mark = ",") else "-"
 
 			boxes <- if (is_gk()) {
 				g <- gk_season_row()
 				save_pct <- if (nrow(g) && !is.na(g$shots_faced[1]) && g$shots_faced[1] > 0) {
 					paste0(round(100 * g$saves[1] / g$shots_faced[1]), "%")
 				} else {
-					"–"
+					"-"
 				}
-				prevented <- if (nrow(g)) fmt(-g$goals_minus_xgoals_gk[1]) else "–"
+				prevented <- if (nrow(g)) fmt(-g$goals_minus_xgoals_gk[1]) else "-"
 				list(
 					c("Minutes", minutes),
 					c("Goals Added (season)", fmt(gplus_total())),
@@ -189,8 +189,8 @@ mod_player_explorer_server <- function(id, app_data) {
 				list(
 					c("Minutes", minutes),
 					c("Goals Added (season)", fmt(gplus_total())),
-					c("Goals − xG", if (nrow(row)) fmt(row$goals_minus_xgoals[1]) else "–"),
-					c("xG + xA", if (nrow(row)) fmt(row$xgoals_plus_xassists[1]) else "–")
+					c("Goals - xG", if (nrow(row)) fmt(row$goals_minus_xgoals[1]) else "-"),
+					c("xG + xA", if (nrow(row)) fmt(row$xgoals_plus_xassists[1]) else "-")
 				)
 			}
 
@@ -209,9 +209,9 @@ mod_player_explorer_server <- function(id, app_data) {
 
 		output$actions_header <- shiny::renderUI({
 			title <- if (is_gk()) {
-				"What they do well — goalkeeper goals added by action"
+				"What they do well - goalkeeper goals added by action"
 			} else {
-				"What they do well — goals added by action"
+				"What they do well - goals added by action"
 			}
 			shiny::tagList(
 				title,

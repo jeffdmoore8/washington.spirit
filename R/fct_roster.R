@@ -14,8 +14,9 @@ NULL
 
 #' Normalise a personal name for matching across data sources
 #'
-#' Lower-cases, transliterates accents to ASCII (Élisabeth -> elisabeth),
-#' drops anything that is not a letter or space, and collapses whitespace.
+#' Lower-cases, transliterates accents to ASCII (an accented "Elisabeth"
+#' becomes "elisabeth"), drops anything that is not a letter or space, and
+#' collapses whitespace.
 #'
 #' @param x Character vector of names.
 #' @return Character vector.
@@ -26,7 +27,7 @@ normalize_name <- function(x) {
 	x <- tolower(x)
 	x <- gsub("[-_]", " ", x)
 	# Drop everything else, including the apostrophes/carets that //TRANSLIT
-	# leaves where an accented letter was (é -> "'e").
+	# leaves where an accented letter was (an accented "e" -> "'e").
 	x <- gsub("[^a-z ]", "", x)
 	x <- gsub("\\s+", " ", x)
 	trimws(x)
@@ -103,5 +104,5 @@ player_badge <- function(data, player_id) {
 		if (!is.na(row$jersey[1])) paste0("#", row$jersey[1]),
 		if (!is.na(row$position[1]) && nzchar(row$position[1])) row$position[1]
 	)
-	if (length(parts)) paste(parts, collapse = " · ") else NULL
+	if (length(parts)) paste(parts, collapse = " - ") else NULL
 }

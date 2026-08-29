@@ -1,11 +1,11 @@
 test_that("every stat shown in the app has a glossary entry", {
 	value_box_stats <- c(
-		"Minutes", "Goals Added (season)", "Goals − xG", "xG + xA",
+		"Minutes", "Goals Added (season)", "Goals - xG", "xG + xA",
 		"Goals prevented vs. xG", "Save %"
 	)
 	percentile_metrics <- c(
 		"xG per 90", "xA per 90", "xG+xA per 90", "Shots per 90",
-		"Key passes per 90", "Goals per 90", "Finishing (G − xG)",
+		"Key passes per 90", "Goals per 90", "Finishing (G - xG)",
 		"Passing vs. expected (per 100)", "Share of team touches"
 	)
 	outfield_actions <- c(

@@ -35,7 +35,7 @@ mod_league_table_server <- function(id) {
 			} else {
 				shiny::div(
 					class = "text-muted small",
-					sprintf("Live from ESPN · %s season", attr(st, "season"))
+					sprintf("Live from ESPN - %s season", attr(st, "season"))
 				)
 			}
 		})

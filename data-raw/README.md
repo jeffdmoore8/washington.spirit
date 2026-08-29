@@ -12,7 +12,7 @@ Rscript data-raw/refresh_data.R
 ```
 
 - League-wide player season tables (`player_*_by_season.parquet`) are kept whole
-  — they are the population for positional percentile ranks.
+  - they are the population for positional percentile ranks.
 - Per-game tables (`player_*_by_game.parquet`) are filtered to the Spirit via
   `team_ids` and tagged with season/kickoff from the `games` snapshot.
 - Goals-added tables are unnested to long form (`action_type`, `goals_added_raw`,
@@ -20,7 +20,7 @@ Rscript data-raw/refresh_data.R
 - `season` is coerced to integer in every snapshot.
 
 Coverage note: ASA NWSL data begins in **2016** (`ASA_FIRST_SEASON`). ESPN /
-`usfootballR` is **not** used for snapshots — its NWSL loaders are broken; only
+`usfootballR` is **not** used for snapshots - its NWSL loaders are broken; only
 the live `espn_nwsl_standings()` call in `mod_league_table` touches ESPN.
 
 ## Scheduled refresh
