@@ -18,6 +18,7 @@ Imports:
     httr,
     jsonlite,
     memoise,
+    pkgload,
     reactable,
     rlang,
     shiny,
@@ -29,7 +30,6 @@ Suggests:
     covr,
     dplyr,
     itscalledsoccer,
-    pkgload,
     spelling,
     testthat (>= 3.0.0),
     tidyr

@@ -13,3 +13,5 @@ $run_dev.*
 ^\.claude$
 ^codecov\.yml$
 ^\.github$
+^app\.R$
+^rsconnect$
