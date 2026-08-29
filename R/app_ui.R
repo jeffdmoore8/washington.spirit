@@ -8,7 +8,14 @@ app_ui <- function(request) {
 	tagList(
 		golem_add_external_resources(),
 		bslib::page_navbar(
-			title = "Washington Spirit Analytics",
+			title = shiny::tagList(
+				shiny::tags$img(
+					src = "www/logo.png",
+					class = "navbar-logo",
+					alt = ""
+				),
+				"Washington Spirit Analytics"
+			),
 			theme = bslib::bs_theme(
 				version = 5,
 				bg = "#FFFFFF",

@@ -30,6 +30,13 @@ body {
 .navbar .navbar-brand {
 	font-weight: 700;
 	text-transform: uppercase;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+}
+.navbar .navbar-brand .navbar-logo {
+	height: 2rem;
+	width: auto;
 }
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
@@ -96,6 +103,15 @@ h1, h2, h3, h4, h5,
 }
 .tooltip .tooltip-arrow::before {
 	border-top-color: var(--spirit-teal-dark);
+}
+
+/* Sidebar collapse chevron: default while open, high-voltage yellow once the
+   sidebar is collapsed so it reads against the teal chrome. */
+.bslib-sidebar-layout.sidebar-collapsed > .collapse-toggle {
+	color: var(--spirit-yellow);
+}
+.bslib-sidebar-layout.sidebar-collapsed > .collapse-toggle > .collapse-icon {
+	opacity: 1;
 }
 
 /* ggiraph charts: fluid, aspect-preserving, fill the card width but cap how
