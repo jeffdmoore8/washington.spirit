@@ -37,7 +37,7 @@ This README has been compiled on the
 
 ``` r
 Sys.time()
-#> [1] "2026-08-29 17:37:48 EDT"
+#> [1] "2026-08-29 18:01:19 EDT"
 ```
 
 Here are the tests results and package coverage:
@@ -45,22 +45,9 @@ Here are the tests results and package coverage:
 ``` r
 devtools::check(quiet = TRUE)
 #> ── R CMD check results ─────────────────────── washington.spirit 0.0.0.9000 ────
-#> Duration: 21.6s
+#> Duration: 21.9s
 #> 
-#> ❯ checking top-level files ... NOTE
-#>   Non-standard files/directories found at top level:
-#>     ‘CLAUDE.md’ ‘manifest.json’
-#> 
-#> ❯ checking package subdirectories ... NOTE
-#>   Problems with news in ‘NEWS.md’:
-#>   No news entries found.
-#> 
-#> ❯ checking dependencies in R code ... NOTE
-#>   Namespaces in Imports field not imported from:
-#>     ‘cachem’ ‘memoise’ ‘pkgload’
-#>     All declared Imports should be used.
-#> 
-#> 0 errors ✔ | 0 warnings ✔ | 3 notes ✖
+#> 0 errors ✔ | 0 warnings ✔ | 0 notes ✔
 ```
 
 ``` r

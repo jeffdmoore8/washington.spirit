@@ -15,3 +15,5 @@ $run_dev.*
 ^\.github$
 ^app\.R$
 ^rsconnect$
+^CLAUDE\.md$
+^manifest\.json$

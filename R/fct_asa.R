@@ -5,8 +5,9 @@
 #' referees dimension tables on creation, so reuse matters.
 #'
 #' @return An `AmericanSoccerAnalysis` object.
+#' @importFrom memoise memoise
 #' @noRd
-asa_client <- memoise::memoise(function() {
+asa_client <- memoise(function() {
 	itscalledsoccer::AmericanSoccerAnalysis$new()
 })
 

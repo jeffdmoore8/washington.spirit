@@ -1,4 +1,4 @@
-# washington.spirit (development version)
+# washington.spirit 0.0.0.9000
 
 * Player Explorer: pick a Washington Spirit player and season to see their
   Goals Added (g+) breakdown by action type, positional percentile ranks, and

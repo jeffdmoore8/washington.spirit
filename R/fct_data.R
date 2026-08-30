@@ -95,4 +95,4 @@ load_app_data_impl <- function() {
 }
 
 #' @noRd
-load_app_data <- memoise::memoise(load_app_data_impl)
+load_app_data <- memoise(load_app_data_impl)

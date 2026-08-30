@@ -135,8 +135,10 @@ fetch_nwsl_standings_impl <- function(year = as.integer(format(Sys.Date(), "%Y")
 	st
 }
 
+#' @importFrom cachem cache_mem
+#' @importFrom memoise memoise
 #' @noRd
-fetch_nwsl_standings <- memoise::memoise(
+fetch_nwsl_standings <- memoise(
 	fetch_nwsl_standings_impl,
-	cache = cachem::cache_mem(max_age = 30 * 60)
+	cache = cache_mem(max_age = 30 * 60)
 )

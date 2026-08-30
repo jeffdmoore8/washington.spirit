@@ -9,6 +9,7 @@ importFrom(bslib,
   layout_sidebar,
   sidebar
 )
+importFrom(cachem,cache_mem)
 importFrom(ggplot2,
   aes,
   coord_flip,
@@ -43,6 +44,7 @@ importFrom(httr,
   user_agent
 )
 importFrom(jsonlite,fromJSON)
+importFrom(memoise,memoise)
 importFrom(rlang,.data)
 importFrom(shiny,
   NS,
